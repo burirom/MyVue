@@ -1,0 +1,24 @@
+<html>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.min.js'></script><!-- 2019-01-25 https://cdnjs.com/libraries/vue -->
+<body>
+<div id="app-142">
+  <div>{{ message }}</div>
+</div>
+<script>
+var app142 = new Vue({
+  el: '#app-142',
+  data: {
+    message: 'Hello!',
+    msg1: '',
+    msg2: ''
+  }
+})
+app142.message = 'Bye!'
+console.log(app142.$el.textContent);
+Vue.nextTick(function() {
+  console.log(app142.$el.textContent);
+})
+
+</script>
+</body>
+</html>
